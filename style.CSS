@@ -1,0 +1,351 @@
+/* Общие стили для body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Более современный шрифт */
+    line-height: 1.7; /* Увеличим межстрочный интервал для читаемости */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Очень светлый серый фон */
+    color: #343a40; /* Темно-серый для основного текста */
+    display: flex; /* Используем flexbox для прижатия footer к низу */
+    flex-direction: column; /* Элементы будут располагаться вертикально */
+    min-height: 100vh; /* Минимальная высота body равна высоте экрана */
+}
+
+/* Стили для шапки (header) */
+header {
+    background: #007bff; /* Яркий синий цвет (Bootstrap primary) */
+    /* Можно использовать градиент: background: linear-gradient(90deg, #007bff, #0056b3); */
+    color: #ffffff;
+    padding: 1.5rem 0; /* Увеличим отступы */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Небольшая тень под шапкой */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em; /* Немного увеличим главный заголовок */
+    font-weight: 300; /* Более легкий шрифт для заголовка */
+}
+
+/* Стили для навигации в шапке */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #e9ecef; /* Светло-серый для ссылок, чтобы не так ярко */
+    text-decoration: none;
+    margin: 0 15px; /* Отступы между ссылками */
+    font-size: 1.1em;
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+nav a:hover, nav a:focus {
+    color: #ffffff; /* Белый при наведении */
+    text-decoration: underline;
+}
+
+/* Стили для основного контента (main) */
+main {
+    flex-grow: 1; /* Позволяет main занять все доступное пространство, прижимая footer */
+    padding: 25px;
+    max-width: 960px; /* Немного увеличим максимальную ширину контента */
+    margin: 30px auto; /* Увеличим отступы сверху/снизу */
+    background: #ffffff;
+    border-radius: 8px; /* Более скругленные углы */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* Более выраженная тень */
+}
+
+/* Общие стили для заголовков внутри main */
+main h2 {
+    color: #0056b3; /* Синий цвет для подзаголовков */
+    margin-top: 0; /* Убираем отступ, если это первый элемент в блоке */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef; /* Линия под заголовком */
+    padding-bottom: 10px;
+}
+main h3 {
+    color: #0069d9;
+}
+
+/* Стили для ссылок в основном контенте */
+main a {
+    color: #007bff;
+    text-decoration: none;
+}
+main a:hover, main a:focus {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Стили для подвала (footer) */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #343a40; /* Темно-серый фон для подвала */
+    color: #adb5bd; /* Светло-серый текст в подвале */
+    margin-top: auto; /* Прижимает футер к низу, если контента мало */
+}
+
+/* Дополнительные стили для карточек из index.html (если вы их использовали в extrastyles) */
+/* Можно перенести их сюда для единообразия */
+.featured-container {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.featured-shipazhay {
+    border: 1px solid #e0e0e0; /* Более мягкая граница */
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: calc(33.333% - 40px); /* Пытаемся сделать 3 в ряд, учитывая margin */
+    min-width: 280px; /* Минимальная ширина, чтобы не слишком сжимались */
+    max-width: 320px; /* Максимальная ширина */
+    vertical-align: top;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Анимация при наведении */
+}
+.featured-shipazhay:hover {
+    transform: translateY(-5px); /* Приподнимаем карточку */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Увеличиваем тень */
+}
+
+.featured-shipazhay img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.featured-shipazhay h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.featured-shipazhay h3 a {
+    color: #0056b3; /* Цвет заголовка-ссылки */
+}
+
+/* Стили для списка шипажаев (shipazhay_list.html) */
+.shipazhay-item {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+}
+.shipazhay-item img {
+    max-width: 220px;
+    height: auto;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.shipazhay-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.shipazhay-item h3 a {
+    color: #0056b3;
+}
+
+/* Стили для детальной страницы (shipazhay_detail.html) */
+.shipazhay-detail-img {
+    max-width: 60%; /* Можно настроить */
+    display: block;
+    margin: 0 auto 30px auto;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.detail-content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #fff; убрал, т.к. main уже белый */
+    /* border-radius: 5px; убрал, т.к. main уже скруглен */
+}
+.detail-content p {
+    text-align: justify;
+    line-height: 1.8; /* Еще немного увеличим для длинных текстов */
+    margin-bottom: 18px;
+}
+.detail-content strong {
+    color: #007bff; /* Ярче выделим */
+}
+
+/* Стили для booking_confirmation.html */
+.confirmation-box {
+    text-align: center;
+    padding: 30px;
+    background-color: #e6ffed;
+    border: 1px solid #b2dfc1;
+    border-radius: 8px;
+    max-width: 650px;
+    margin: 30px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.confirmation-box h2 {
+    color: #155724; /* Темно-зеленый для успеха */
+    margin-bottom: 15px;
+}
+.confirmation-box p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+.confirmation-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    text-align: left; /* Выравнивание списка по левому краю */
+    display: inline-block; /* Чтобы центрировать список как блок */
+}
+.confirmation-box ul li {
+    margin-bottom: 8px;
+}
+.confirmation-box strong {
+    color: #004085; /* Синий для выделения */
+}
+.home-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.home-button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для booking.html */
+.booking-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+.form-group input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.form-group input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.form-group h3 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+/* ... (все стили до .featured-container остаются как были) ... */
+
+/* Обновленные стили для карточек на главной */
+.featured-container {
+    display: flex;         /* Используем flexbox для выравнивания */
+    flex-wrap: wrap;       /* Позволяем карточкам переноситься на новую строку */
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    gap: 20px;             /* Расстояние между карточками (заменит margin у карточек) */
+    padding: 20px 0;
+}
+
+.featured-shipazhay {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    /* margin: 10px; - убираем, так как используем gap в .featured-container */
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+    text-align: left;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+    display: flex; /* Делаем саму карточку flex-контейнером */
+    flex-direction: column; /* Элементы внутри карточки будут располагаться вертикально */
+    
+    flex-basis: 300px; /* Начальная (рекомендуемая) ширина карточки */
+    min-width: 280px;  /* Минимальная ширина, чтобы не слишком сжимались */
+    max-width: 320px;  /* Максимальная ширина карточки */
+    flex-grow: 0;      /* Карточки не будут растягиваться, чтобы заполнить пустое место, если их мало */
+                       /* Если хочешь, чтобы растягивались, поставь flex-grow: 1; */
+}
+
+.featured-shipazhay:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.featured-shipazhay img {
+    max-width: 100%;    /* Картинка будет занимать всю ширину карточки */
+    height: 200px;      /* Зададим фиксированную высоту для картинок */
+    object-fit: cover;  /* Масштабирует изображение, сохраняя пропорции и обрезая лишнее, чтобы заполнить блок */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.featured-shipazhay h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    min-height: 2.6em; /* Примерно для двух строк заголовка, чтобы выровнять карточки если заголовки разной длины */
+}
+
+.featured-shipazhay h3 a {
+    color: #0056b3;
+}
+
+.featured-shipazhay p { /* Стиль для описания внутри карточки */
+    font-size: 0.95em; /* Чуть увеличим шрифт описания */
+    color: #495057;  /* Немного другой оттенок серого */
+    line-height: 1.5; /* Межстрочный интервал для описания */
+    flex-grow: 1;     /* Позволяет параграфу занять оставшееся место, если карточки разной высоты по контенту */
+    margin-bottom: 0; /* Убираем нижний отступ у последнего элемента в карточке */
+}
+
+/* ... (остальные стили после .featured-shipazhay p остаются как были: .shipazhay-item и т.д.) ... */
